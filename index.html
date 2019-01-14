@@ -1,0 +1,604 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Gast College &mdash; HAS Den Bosch</title>
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<link rel="stylesheet" href="reveal_js/css/reveal.css">
+	<link rel="stylesheet" href="reveal_js/css/theme/webmapper.css">
+	<link rel="stylesheet" href="reveal_js/lib/css/zenburn.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- Intro ikkuh -->
+			<section>
+				<section data-state='openingslide'>
+					<h1>van informatie tot visualisatie</h1>
+				</section>
+				<section>
+					<p>Deze presentatie:</p>
+					<h2 style="text-transform: initial;"><a href="https://github.com/NieneB/">github.com/NieneB/has_college</a></h2>
+					<p>Veel links, blogs, voorbeelden, etc.! Dus klik mee</p> 
+					<img src="https://media.giphy.com/media/ToMjGpmQcblIGMmbJQI/giphy.gif">
+				</section>
+			</section>
+			<!-- OVER MIJ! -->
+			<section>
+				<section>
+					<h1>Over mijzelf - 2 uur</h1>
+					<h3>Niene Boeijen</h3>
+				</section>
+				<section>
+					<h2>Kunstacademie - Propaedeuse</h2>
+					<p>Avans Hogeschool Den Bosch</p>
+				</section>
+				<section>
+					<h2>MSc Geo Information Science</h2>
+					<img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img/wur.jpg" width="250px">
+					<a href="https://www.wur.nl/en/Education-Programmes/master/MSc-programmes/MSc-Geo-Information-Science/Programme.htm"><img src="https://www.wur.nl/upload_mm/1/f/1/1748bfc3-64bb-4dec-88ea-ffec48da8faf_20180307%20Update%20MGI%20schema%202018-2020.JPG"></a>
+				</section>
+				<section>
+					<h1>ArcMap gedrochten... </h1>
+					<img src="https://media.giphy.com/media/y8btJ3OOxT4sg/giphy.gif">
+				</section>
+				<section>
+					<a href="https://code.waag.org/buildings/#52.376,4.8391,12"><img src="reveal_js/img/waag_buildings.png"></a>
+				</section>
+				<section>
+					<p>Stage Geo Web Visualisatie</p>
+					<a href="https://waag.org/en/users/niene-boeijen">
+						<img src="https://raw.githubusercontent.com/NieneB/Webmapping_for_beginners/gh-pages/img//WS_logo.jpg" height="100px">
+					</a>
+				</section>
+				<section>
+					<a href="https://bertspaan.nl/">Bert Spaan</a>
+					<h1>"Als je maar geen Microsoft Word gebruikt! .. "</h1>
+					<p class="fragment fade-in">"Hoe dan?"</p>
+				</section>
+				<section>
+					<p><a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> gaan leren</p>
+					<p><a href="http://nieneb.github.io/InternshipReport/">nieneb.github.io/InternshipReport</a></p>
+					<img src="reveal_js/img/markdwons.png">
+				</section>
+				<section>
+					<a href="https://github.com/NieneB/veldnamen"><img src="https://raw.githubusercontent.com/NieneB/veldnamen/master/public/pict/mapspanel.png"></a>
+				</section>
+				<section>
+					<p> Veel tools, niet 1 antwoord</p>
+					<p> Programmeren is méér vrijheid! </p>
+
+				</section>
+				<section>
+						<h1>Nu ben ik</h1>
+						<h2> Web Cartograaf </h2> 
+						<a href="http://webmapper.net">
+							<img src="https://raw.githubusercontent.com/wiki/NieneB/Webmapping_for_beginners/img/webmapper_logo_tekst.png" height="120px">
+						</a>
+				</section>
+			</section>
+			<!-- WEBMAPPER -->
+			<section>
+				<section>
+					<h1>Bij Webmapper</h1>
+					<img src="http://webmapper.net/img/infographic_wide.png">
+				</section>
+				<section>
+					<h1>Bij Webmapper</h1>
+					<p>Elke dag programmeren.. </p>
+					<p>& creatief bezig zijn</p>
+					<div style="float: left; width: 50%">
+						<img src="https://media.giphy.com/media/lNubxCPAPvSUw/giphy.gif">
+					</div>
+					<div style="float: right; width: 50%">
+						<img src="https://media.giphy.com/media/111lHxaiJynQg8/giphy.gif">
+					</div>
+					<aside class="notes">
+						Coding is creatief maar uitdagend. coding sucks. but it's worth it. Totally worth it. It only takes
+						a little skill to produce awesome things.
+					</aside>
+				</section>
+				<section>
+					<h1>Bij Webmapper</h1>
+					<p>Open Source</p>
+					<p>Open Data</p>
+					<p>Open standaarden</p>
+					<aside class="notes">
+						Je kan elke techniek kiezen bij de vraag en doel. </br>Functionaliteit veranderd. We zitten niet vast aan 1 software
+						pakket. </br>
+						Uitdaging: Verandert veel. Maar veel vrijheid: Zelf tools aanpassen.
+					</aside>
+				</section>
+			</section>
+			<!-- WEB CARTOGRAFIE oftewel GEOMEDIA DESIGN -->
+			<section>
+				<section>
+					<p> Wat moet je kunnen als </p>
+					<h1><code>[[Web]]</code> Cartograaf</h1>
+					<p class="fragment visible">Tegenwoordig is een kaart niet meer een plat op papier maar vaak dynamisch, interactief en online!</p>
+					<aside class="notes">
+wat is Web Cartograaf. jullie ook?</br>
+oud vakgebied. Print papier. </br>
+ Tegenwoording maken we weinig kaarten meer op papier, maar vaak online, interactief, dynamisch.
+					</aside>
+				</section>
+				<section data-background="./reveal_js/img/Sat-Nav-vs-Map.jpg">
+					<div style="float:right; width:462px; height:650px; margin-right:0px;">
+					<img class="fragment fade-out" data-fragment-index="0" src="./reveal_js/img/new_cartographers.png" width="462" height="615" style="position:absolute;top:0;right:0;"> 
+					<img class="fragment fade-in" data-fragment-index="0" src="./reveal_js/img/new_cartographers2.png" width="462" height="615" style="position:absolute;top:0;right:0;">
+					<small><a  href="http://www.sciencemag.org/careers/2013/03/new-cartographers" style="position:absolute;bottom:0;right:0;">[source]</a></small>
+					</div>
+					<aside class="notes">
+						leuk blog artikel over
+						</br> Science Magazine website.
+						</br>
+						Techniek veranderd >> vakgebied ook!!
+					</aside>
+				</section>
+				<section>
+					We no longer go to maps to find out where we are. Instead, we tell maps where we are and they form around us on the fly.
+					<small><a href="https://inthesetimes.com/article/3524/the_new_cartographers/">[source]</a></small>
+					<aside class="notes">
+						Blog These Times.
+						</br>
+						Andere technieken. Niet alleen maar Design.. 
+					</aside> 
+				</section>
+				<section data-background="http://blogs.discovermagazine.com/citizen-science-salon/files/2015/10/shutterstock_260023832.jpg">
+					<blockquote style="width: 50%">
+					There has never been more open data available than at this moment in time, and everyone from global NGOs to armchair hobbyists are using that data to create maps.
+				<small>
+					<a href="https://nextcity.org/features/view/the-new-cartographers">[source]</a>
+					
+				</small></blockquote>
+				<aside class="notes">
+Daarnaast + Meer data + Meer techniek </br>
++ open-source mogelijkeheden >
+</br>
+ iedereen kan cartograaf spelen.. 
+				</aside>
+				</section>
+				<section data-background="./reveal_js/img/achtergrondje.png">
+					<blockquote style="width: 50%">
+					Cartografie is geen niche meer:
+					<ul>
+						<li>Big data</li>
+						<li>Massaconsumptie</li>
+						<li>Open source sofware</li>
+						<li>Open data</li>
+					</ul>
+				<small>
+					<a href="https://www.slideshare.net/jatorre/siglibre-english-17036935">[source]</a>
+				</small>
+				</blockquote>	
+				<aside class="notes">
+maar onderdeel vna iets groters </br>
+Geo is overal.  Elke dataset bevat wel geo. Elke ontwikkelaar werkt er wel eens mee zonder het te beseffen. 
+</br>
+Mass consumption > iedereen maakt kaarten en wil verhalen vertellen met kaarten. Zie in kranten, nieuws etc. Tegenwoordig
+zijn kaarten ontzettend populair. iedereen kent kaarten en snapt het. Google maps is main stream. Design is belangrijk! 
+</br>
+Meer tools en data beschikbaar. Het wordt ook makkelijker. 
+				</aside>
+				</section>
+				
+				<!-- <section>
+					GeoPortals.. Ugh. 
+					Desing Usability Experience.
+					Een lengenda is het bewijs dat een kaart niet goed ontworpen is. 
+				</section> -->
+				<section >
+					<div style="background-color: rgba(255,255,255,0.8); padding:20px;">
+					<h1>Web Mapping</h1>
+					<ul>
+						<li>Interactie</li>
+						<li>User-Experience</li>
+						<li>Animatie</li>
+					</ul>
+					</br>
+					<q>The realization of the interactive map as an experience, not just a map design.</q>
+					<small>
+						<a href="https://www.slideshare.net/jatorre/siglibre-english-17036935">[source]</a>
+					</small>
+					</div>
+					<aside class="notes">
+						Wat is web mapping geworden:</br>
+						We ontwerpen interactief.  op data. Meerdere zoom levels. Geen legenda's. Met klik interacties om meer info te laten zien. De gebruiker
+						bepaalt wat hij ziet op een kaart. Niet meer de cartograaf... 
+						</br>
+						Gebruiksvriendelijkeheid.
+						</br>
+						Realiseeren dat een kaart meer is dan cartografie.
+					</aside>
+				
+				</section>
+				<section>
+					<h1> Good Reads</h1>
+					<a href="https://edition.cnn.com/style/article/cartography-in-the-21st-century/index.html">The future of maps: Cartography in the 21st century</a>
+					<a href="https://medium.com/@kennelliott/39-studies-about-human-perception-in-30-minutes-4728f9e31a73">39 studies about	human perception in 30 minutes</a>
+					<a href="https://www.zeit.de/feature/streetdirectory-streetnames-origin-germany-infographic-english"></a>
+				</section>
+				<section data-background-iframe="http://www.nytimes.com/projects/2012/snow-fall/index.html#/?part=tunnel-creek">
+				<a href="http://www.nytimes.com/projects/2012/snow-fall/index.html#/?part=tunnel-creek">snow-fall</a>
+				</section>
+				<section>
+					<h1>Web Mapping</h1>
+					<ul>
+						<li>snelheid en schaalbaarheid</li>
+						<li>Data-gestuurd</li>
+						<li>Responsive ontwerp</li>
+						<li>Gepersonaliseerd</li>
+					</ul>
+					</br>
+					<img src="https://media.giphy.com/media/3ohBV3swUjlLSwyaTm/giphy.gif"/>
+					
+					<aside class="notes">
+						Snel zijn. Als iets langzaam reageert haakt de gebruiker af. </br>
+						Data veranderd. Beeld ook </br>
+						Elke browser aankunnen en device. </br>
+						User drivern
+					</aside>
+				</section>
+				<section>
+					<img src="https://static1.squarespace.com/static/54ff63f0e4b0bafce6932642/t/590746f8bebafb1fcb54b141/1492188776597/?format=750w">
+				</section>
+				<section>
+					<q>Cartography is the new code.</q>
+					<img src="./reveal_js/img/cool_carthography.png">
+					<small>
+						<a href="https://www.wired.com/story/mapping-the-future-cartography-stages-a-comeback/">[source]</a>
+					</small>
+					<aside class="notes"> Programeren is key!! 
+						 Cartografie is niet alleen maar de kaart ontwerpen er komt van allerlei techniek en interactie om heen.
+					</aside>
+				</section>
+				<!-- <section>
+					<q>Vibrant. Dynamic. Responsive. Intelligent. We no longer have the static images, the paper-under-glass we used to have. Instead,
+					today’s maps feel like living, breathing things – highlighting everything related to our taps and inputs, and dimming and
+					de-emphasizing everything that isn’t.</q>
+					<small><a href=https://www.justinobeirne.com/autonomous-vehicle-cartography#part-1>[source]</a></small>
+				</section> -->
+				<section>
+					<h1>Vaardigheden</h1>
+					<q>You need to be able to find, manipulate, and store spatial and non-spatial data. </br> You need to be able to design a <b>functional</b> and attractive cartographic representation of that data as well as the <b>UI controls</b> to operate it.
+					</br>
+					 You need to be able to implement that <b>design through code</b>.
+					</q>
+					<small><a href="https://www.axismaps.com/blog/2012/09/advice-to-the-aspiring-interactive-cartographer/">[source: Axis Maps]</a></small>
+					<aside class="notes">Skills die je nodig hebt. 
+						Axis Maps blog </br>
+						advies aan beginnende interactive carthografen. 
+					</aside>
+				</section>
+				
+				<section>
+					<h1>van Cartograaf naar .. </h1>
+					<p class="fragment visible">Data-analist / GIS-specialist</p>
+					<p class="fragment visible">Full-stack ontwikkelaar</p>
+					<p class="fragment visible">Interactie-ontwerper (IX)</p>
+					<p class="fragment visible">User Experience-ontwerpter (UX)</p>
+				</section>
+				<section>
+					<img src="reveal_js/img/best_engineering_job.png">
+					<small><a href="https://money.usnews.com/careers/best-jobs/cartographer">[source]</a></small>
+					<aside class="notes">
+						  Let op engineering. Technisch beroep geworden.</br> In Amerika staat de cartograaf als derde beste engineering job op de lijst en ze denken dat de vraag alleen maar toe neemt.
+					</aside>
+				</section>
+				<section>
+					<q>... the demand for cartographers is projected to grow nearly 30 percent by 2024.</q>
+						<small>	<a href="https://www.slideshare.net/jatorre/siglibre-english-17036935">[source]</a>
+						</small> </br>
+					
+					<!-- <q> .. this profession will grow by 19 percent from 2016 to 2026. </q> <small> <a href=https://money.usnews.com/careers/best-jobs/cartographer>[source]</a></small> -->
+					<aside class="notes">
+						Meer Data + Meer Techniek = Meer banen. </br>
+						!!! Juiste beroep gekozen.
+					</aside>
+				</section>
+			</section>
+			<!-- THE WEB MAP UNIVERSE -->
+			<section>
+				<section>
+					<h1>Een kaart is een collectie van data. </h1> 
+				</section>
+				<section>
+					<h1>Het Web Map Universum </h1>
+					<i>
+						<p>Poging tot.. </p>
+					</i>
+					<img src="https://media.giphy.com/media/yOxRIWzT9JZJu/giphy.gif" />
+			
+					<aside class="notes">
+						web cartograaf. </br>
+						web wereld in beweging.
+						Groot
+						Uitdijend.
+						Universum.
+						</br>
+						Ik ken niet alles.
+						Stukje wat ik ken.
+					</aside>
+				</section>
+				<section >
+					<div style="background-color: rgba(255,255,255,0.8); padding:20px;">
+					<h4>Technieken in </h4>
+					<h1>Het Web Map Universum!</h1>
+					<p>Data Design Code</p>
+					</div>
+					<aside class="notes">
+						 welke technologien er precies zijn voor Web maps. 
+					</aside>
+				</section>
+				<section>
+					<h1>Even testen..</h1>
+					<p class="fragment visible">Geo-data</p>
+					<p class="fragment visible">Projecties</p>
+					<p class="fragment visible">Desktop GIS(ArcGIS , Qgis)</p>
+					<p class="fragment visible">HTML, CSS, JS</p>
+					<p class="fragment visible">Web maps - Leaflet - raster tegels</p>
+					<p class="fragment visible">GeoJSON format</p>
+					<p class="fragment visible">Web Map Services (WMS / WFS)</p>
+					<p class="fragment visible">Geo databases - Postgis</p>
+					<p class="fragment visible">Vector tegels</p>
+					<aside class="notes">
+						 Voordat we de technologie in duiken ga ik eerst even testen hoeveel jullie al weten?
+					</aside>
+				</section>
+				<section>
+					<h1>Van Data naar het Web</h1>
+					<p>Doel >> Functionaliteit >>  Mapping Technologie  >> Design</p>
+					<img src="reveal_js/img/desktop_web1.jpg"> <!-- desktop server data-->
+					
+					<a href="https://www.axismaps.com/blog/2012/09/advice-to-the-aspiring-interactive-cartographer/"></a>
+					<aside class="notes">
+						Data naar kaart is anders per doel, dataset, functionaliteit,HEEL generalisernd plaatjes is.  
+						 from source to ready-to-map are different for every dataset,
+						data vinden, bewerken/manipuleren, samenvoegen met andere data. > GIS 
+						Data opslaan  (bestand /database ) 
+						Hoe naar de kaart? serveren > opzetten + onderhoud
+						Ontwerp kaart
+						Ontwerp interface, interactie, experience.  
+					</aside>
+				</section>
+				<section>
+					<h1>Data Code Design </h1>
+						<ol>
+							<li> Laad de data</li>
+							<li> Maak dingen werkend</li>
+							<li> Maak dingen mooi
+						</ol>
+					<p>
+							<a href="https://www.axismaps.com/blog/2012/09/advice-to-the-aspiring-interactive-cartographer/">[source: Axis Maps]</a>
+						</small>
+						</p>
+				</section>
+				<section>
+					<h1>Doel?</h1> 
+					<p>Veel manieren om geo-data op het web te krijgen!</p>
+					<ul>
+						<li>Interactieve/statische web map</li>
+						<li>Web GIS applicatie </li>
+						<li>WMS/WFS</li>
+						<li>Download link</li>
+						<li>Animated, real time</li>
+						<li>Collaborative web maps</li>
+						<li>Online atlasses</li>
+						<li>Infographic, plaatje, video, gif</li>
+					</ul>
+					<aside class="notes">
+						<p>GIS web map</p>
+						<p> Animated, real time</p>
+						<p>Collaborative web maps</p>
+						<p>Online Atlasses</p>
+						<p>Static web maps</p>
+					</aside>
+				</section>
+				<section data-background="reveal_js/img/web_map_universe.png" data-background-size="80%">
+					<aside class="notes">
+
+We hebben een schema opgezet waar je allerelei technieken ziet die je hier voor kan gebruiken. Dingen die je als Web cartograaf
+zou moeten kennen om alle moglijke geo data visualisaties te kunnen maken. en ja, met het meeste werken wij bij Webmapper
+ook!
+					</aside>
+					<!-- <img src="reveal_js/img/web_map_universe.png" /> -->
+				</section>
+
+				<section data-background="reveal_js/img/web_map_universe_data.png" data-background-size="80%">
+				</section>
+				<section data-background="reveal_js/img/web_map_universe_data_hosting.png" data-background-size="80%">
+				</section>
+				<section data-background="reveal_js/img/web_map_universe_data_hosting_design.png" data-background-size="80%">
+				</section>
+				<section data-background="reveal_js/img/web_map_universe_data_hosting_design_code.png" data-background-size="80%">
+				</section>
+				<section data-background="reveal_js/img/web_map_universe_data_hosting_design_code_all.png" data-background-size="80%">
+					<aside class="notes"> Ben niet bang. Het belangrijkste is dat je alles een keer hoort. Mocht je het ooit tegen komen dan weet je nu sneller waar je moet zoeken.</aside>
+				</section>
+			</section>
+			<!-- DESIGN -->
+			<section>
+				<section>
+					<blockquote>
+						<q>everything is related to everything else, but near things are more related than distant things</q>
+						<p>Tobler's first law of geography</p>
+					</blockquote>
+				</section>
+					<section>
+						<h1>Power of Maps</h1>
+						<p>Our brains organise by location </p>
+						<i>We have no choice but to think and see spatially</i>
+						<a href="http://learn.arcgis.com/en/arcgis-book/chapter3/">[1]</a>
+						<aside class="notes">
+							Overleving is ruimtelijk denken. Onze hersenen werken ruimtelijk.
+							Een mooie kaart stimuleerd daarom beide zijde van onze hersenen. Rechts voor intuity and aesthetcis, links rationeel
+							anlytisch en ruimtelijk.
+						</aside>
+					</section>
+					<section>
+						Information may be infinite, however... The organization of information is finite as it can only be organized by LATCH:
+						Location, Alphabet, Time, Category, or Hierarchy. - Richard Saul Wurman, 1996
+					</section>
+					<section>
+						Maps make sense of things. They lend order to complex environments, and they reveal patterns and relationships.
+					</section>
+					<section>
+						Beautifully designed maps stimulate both sides of our brain: the right side that's intuitive and aesthetic, and the
+						left side that's rational and analytical.
+						
+						http://learn.arcgis.com/en/arcgis-book/chapter3/
+						
+					
+
+					</section>
+					<section>
+						Steps for Communicating Map
+					Information
+					1. Consider what the real-world distribution of
+					the phenomenon might look like
+					2. Determine purpose of the map and intended
+					audience
+					3. Collect data appropriate to map’s purpose
+					4. Design and construct the map
+					5. Determine if users find the map
+					useful/informative
+
+					</section>
+					<section>
+						<img src="reveal_js/img/ChartGuide-Poster-30-preview.jpg" />
+						<aside class="notes">
+							Daarom focussen wij nu op de ruimtelijke aspecten van de data. Hier wordt de kaart een beetje onder gewardeerd. We
+							hopen jullie te laten zien wat de kracht van de kaart is en hoe je een kaart kan maken.
+							maps allow us to communicate about location using a common framework.
+						</aside>
+					</section>
+						<section>
+							<h1>What is <u>Geo</u> Data ?</h1>
+							<aside class="notes"> Hiervoor gaan we gebinnen bij het begin. Map is collection of geo data. Wat is geo data? Wat is
+								er anders aan? </aside>
+						</section>
+							<section>
+								<h1>Maps = Collection of <u>Geo</u> data</h1>
+								<p>Maps organise complex data about the environment. </p>
+								<p>Reveal patterns and relationships.</p>
+								<p>Maps allow us to communicate about location using a <u>common framework</u></p>
+							</section>
+				<section>
+											<h4>Beyond Bertin</h4>
+
+					<h1> Design </h1>
+				</section>
+				<section>
+					<img src="reveal_js/img/chain.jpg" />
+				</section>
+				<section>
+					<img src="reveal_js/img/visual_thinking_communication.png" />
+				</section>
+				<section>
+					<h1> Cartografie?!</h1>
+					<ul>
+						<li>Grafisch & Cartografisch ontwerp</li>
+						<li>UX design</li>
+						<li>Film tropes storytelling concepten</li>
+						<li>Gestalt</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Inhoud</h1>
+					<ul>
+						<li>Gegevenseigenschappen</li>
+						<li>Grafische variabelen</li>
+						<li>Tropes</li>
+						<li>Gestalt</li>
+						<li>Map components</li>
+						<!-- <li>Perception, illusion, color blindness</li> -->
+					</ul>
+					<p>daarna zelf aan de slag!</p>
+				</section>
+				<section>
+					<h1>Paar tips! </h1>
+				</section>
+				<section>
+					<h1>1. Gebruik Géén Defaults!</h1>
+				</section>
+				<section>
+					<h1>2. Een kaart is méér dan alleen de kaart. Alles eromheen verteld ook het verhaal.</h1>
+				</section>
+				<section>
+					<h1>3. Een polygoon hoeft geen polygoon te zijn, een lijn geen lijn, een punt geen punt... </h1>
+				</section>
+				<section>
+					<h1>4. Ben creatief! Probeer eens wat anders.</h1>
+					<img src="https://media.giphy.com/media/3oEduXdm2gjnrsJBOo/giphy.gif" />
+				</section>
+				<section>
+					<h1>5. Error & trial </h1>
+				</section>
+			</section>
+			<!-- VOORBEELDEN WERKVELD WEBMAPPER -->
+	
+			<section>
+				<section>
+					<h1>Verre toekomst? ..</h1>
+					<img src="reveal_js/img/maps_will_be_dead.png">
+					<small>
+						<a href="https://www.justinobeirne.com/autonomous-vehicle-cartography#part-1">[source]</a>
+					</small>
+				</section>
+				<section>
+					<img src="reveal_js/img/are_we_there_yet.png">
+					<small><a href="http://edition.cnn.com/travel/article/flight-maps-the-newest-airline-moneymaker/index.html">[source]</a></small>
+					<aside class="notes"> Mensen willen weten waar ze zijn! Ook al vliegen ze niet zelf. </aside>
+				</section>
+				<section>
+					<h3>nieneb.github.io/web_map_universe/</h3>
+					<aside class="notes"> Links </aside>
+				</section>
+				<section>
+				<h1>Samenvatting</h1>
+				<p>De nieuwe cartograaf</p>
+				<p>Data Design Code</p>
+				<p>Web Map Universum</p>
+				<p>Voorbeelden uit het werkveld</p>
+				<p>Toekomst</p>
+				</section>
+				<section>
+					<h1>Kom langs! </h1>
+					<img src="reveal_js/img/webmapper_logo_tekst.png" height="150px" >
+					<img src="reveal_js/img/maptimeAMS.png" height="250px">
+				</section>
+				<section>
+					<h1>Bedankt!</h1>
+					<p>niene@webmapper.net</p> 
+					<p>@BNiene </p> 
+					<img src="https://media.giphy.com/media/crpEBn4lPYLkY/giphy.gif">
+				</section>
+			</section>
+		</div>
+	</div>
+	<script src="reveal_js/lib/js/head.min.js"></script>
+	<script src="reveal_js/js/reveal.js"></script>
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+			{ src: 'reveal_js/plugin/markdown/marked.js' },
+			{ src: 'reveal_js/plugin/markdown/markdown.js' },
+			{ src: 'reveal_js/plugin/notes/notes.js', async: true },
+			{ src: 'reveal_js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+		Reveal.configure({ pdfMaxPagesPerSlide: 1 });
+	</script>
+</body>
+</html>
